@@ -1,0 +1,6 @@
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.text_area :body %>
+    <%= f.button 'Create Comment', class: 'button dark-button small-button' %>
+  </p>
+<% end %>

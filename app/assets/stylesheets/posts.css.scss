@@ -1,0 +1,68 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$dark-color: #575e70;
+
+$small_text: "Georgia";
+$large_text: "Myriad";
+
+//FIX ME (TRYING TO ACCESS THE FORM IN COMMENTS VIEW)
+
+.new_comment {
+  textarea {
+    display: block;
+  }
+}
+
+.posts_list {
+  width: 100%;
+  font-size: 16spx;
+  font-family: $small_text;
+  margin-bottom: 1em;
+
+  th,
+  td {
+    padding: 4px 8px;
+    border-bottom: 1px solid #dedede;
+  }
+
+  th {
+    text-align: left;
+    font-size: 25px;
+    color: #6b7382;
+    border-bottom-width: 2px;
+  }
+}
+
+form.new_post {
+  label {
+    color: $dark-color;
+  }
+
+}
+.new_post_header {
+  color: $dark-color;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: $small_text;
+}
+
+.post_title, .post_text {
+  font-weight: bold;
+  font-size: 38px;
+  color: $dark-color;
+  font-family: $large_text;
+}
+
+.text {
+  font-family: $large_text;
+  font-size: 26px;
+  color: $dark-color;
+}
+
+.comment_header {
+  font-size: 26px;
+  color: $dark-color;
+  font-family: $small_text;
+}

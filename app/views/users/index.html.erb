@@ -1,0 +1,14 @@
+<h1 class="title">Users List</h1>
+
+<table class="user_list">
+  <tr>
+    <th>Username</th>
+    <th class="center">ID</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.username %></td>
+      <td class="center"><%= user.id %></td>
+    </tr>
+  <% end %>
+</table>

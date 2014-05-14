@@ -1,0 +1,21 @@
+<p>
+  <b class="post_title">Title: "</b>
+  <span class="text"><%= @post.title %></span><b class="post_title">"</b>
+</p>
+<p>
+  <b class="post_text">Text: "</b>
+  <span class="text"><%= @post.text %></span><b class="post_text">"</b>
+</p>
+
+<br><h2 class="comment_header">Comments (<%= @post.comments.size %>) </h2>
+<%= render @post.comments %>
+
+<% if current_user %>
+<br><h2 class="comment_header">Add A Comment</h2>
+<%= render "comments/form" %>
+<% end %>
+
+<br><br><br>
+<% if @post.user == current_user %>
+  <%= link_to "Edit This Post", edit_post_path(@post), class: "button" %>
+<% end %>

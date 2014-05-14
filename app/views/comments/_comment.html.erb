@@ -1,0 +1,9 @@
+<p>
+  <b><%= comment.user.try(:username) || "Anonymous" %>: </b>
+  <b>"</b><%= comment.body %>"</b>
+</p>
+<% if current_user && (@post.user == current_user || comment.user == current_user) %>
+<p>
+  <%= link_to "Delete Comment", [comment.post, comment], class: "button dark-button small-button", method: :delete, data: { confirm: "If you are certain you would like to delete this comment, click 'OK'." } %>
+</p>
+<% end %>

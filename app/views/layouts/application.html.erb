@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <div class="page-container">
+      <%= image_tag 'logo.png', class: 'logo' %>
+      <nav>
+        <%= link_to "Posts", posts_path, class: 'button' %>
+        <%= link_to "Users", users_path, class: 'button' %>
+      </nav>
+    </div>
+  </header>
+  <div class="page-container">
+    <%= show_flashes %>
+    <%= yield %>
+
+    <hr>
+    <div class="login">
+    <% if current_user %>
+    <p>Hi <%= current_user.username %>! <%= link_to 'Logout', logout_path, class: 'button' %></p>
+    <% else %>
+    <p>Not logged in. <%= link_to 'Login', login_path, class: 'button' %></p>
+    <% end %>
+    </div>
+  </div>
+</body>
+</html>

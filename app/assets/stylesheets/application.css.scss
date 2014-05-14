@@ -1,0 +1,112 @@
+/*
+ *= require_self
+ *= require_tree .
+ */
+
+$dark-color: #575e70;
+
+.flash-alert {
+  border-style: solid;
+  border-color: #b00100;
+  color: #b00100;
+  padding: 7px;
+  margin: 10px 0 10px 0;
+}
+
+.flash-notice {
+  margin: 10px 0 10px 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: $dark-color;
+
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  max-width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #33363b;
+  height: 81px;
+
+  nav {
+    padding: 22px;
+    float: right;
+  }
+}
+
+.title {
+  font-size: 35px;
+  font-family: "Georgia";
+  color: #575e70;
+}
+
+table {
+  th.center,
+  td.center {
+    text-align: center;
+  }
+}
+
+.logo {
+  display: block;
+  float: left;
+  width: 342px;
+  height: 81px;
+}
+
+.button {
+  font-family: 'Lucida Grande';
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  background-color: #8ea7bc;
+  color: #fff;
+  border: 0;
+  padding: 12px 40px;
+  border-radius: 50em;
+  text-decoration: none;
+
+  &.dark-button {
+    background-color: $dark-color;
+  }
+
+  &.small-button {
+    font-size: 10px;
+    padding: 9px 25px;
+  }
+
+  &:hover {
+    background-color: darken(#8ea7bc, 10%);
+  }
+}
+
+aside {
+  img {
+    max-width: 100%;
+  }
+}
+
+aside.right {
+  width: 300px;
+  float: right;
+  padding: 0 0 5px 10px;
+}
+
+.login {
+  font-family: 'Lucida Grande';
+  font-size: 15px;
+  font-weight: bold;
+
+  .button {
+    padding: 6px 20px;
+  }
+}
